@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestion des Contacts</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <h1>Contactify</h1>
+        <ul>
+            <li><a href="#dashboard">Tableau de bord</a></li>
+            <li><a href="#ajouter">Ajouter un contact</a></li>
+            <li><a href="#recherche">Rechercher</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section principale -->
+    <div class="container">
+        <!-- Tableau de bord -->
+        <section id="dashboard">
+            <h2>Tableau de bord</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3 id="total-contacts">0</h3>
+                    <p>Total Contacts</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="recent-contacts">0</h3>
+                    <p>Contacts Récents</p>
+                </div>
+            </div>
+            <table id="contacts-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Téléphone</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les contacts seront injectés ici -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Ajouter un contact -->
+        <section id="ajouter">
+            <h2>Ajouter un Contact</h2>
+            <form id="add-contact-form">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <label for="telephone">Téléphone :</label>
+                <input type="text" id="telephone" name="telephone" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+
+        <!-- Rechercher un contact -->
+        <section id="recherche">
+            <h2>Rechercher un Contact</h2>
+            <input type="text" id="search-bar" placeholder="Rechercher par nom ou prénom...">
+            <ul id="search-results">
+                <!-- Les résultats de la recherche seront affichés ici -->
+            </ul>
+        </section>
+    </div>
+
+    <!-- Notifications -->
+    <div id="notifications"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
