@@ -1,0 +1,30 @@
+# Ignorer les fichiers objets et de compilation
+*.o
+*.out
+*.exe
+*.a
+*.so
+
+# Ignorer l'exécutable généré
+projet
+
+# Ignorer les dossiers de compilation
+build/
+
+# Ignorer les fichiers de débogage
+*.log
+*.stackdump
+*.core
+
+# Ignorer les fichiers de configuration des IDE/éditeurs
+*.swp
+*.swo
+.vscode/
+.idea/
+*.db
+
+# Ignorer les fichiers spécifiques à l'utilisateur
+*.bak
+*.tmp
+*.old
+.DS_Store
